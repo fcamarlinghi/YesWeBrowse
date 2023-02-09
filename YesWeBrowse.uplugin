@@ -1,0 +1,23 @@
+﻿{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "YesWeBrowse",
+  "Description": "Bring the Content Browser button back to the UE5 toolbar.",
+  "Category": "Other",
+  "CreatedBy": "Francesco Camarlinghi",
+  "CreatedByURL": "https://minifloppy.it",
+  "DocsURL": "https://minifloppy.it",
+  "MarketplaceURL": "",
+  "CanContainContent": false,
+  "IsBetaVersion": false,
+  "IsExperimentalVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "YesWeBrowse",
+      "Type": "Editor",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# UE4 project ignore file
+# Designed to protect from commiting blobs without managing them with git-lfs
+# Based on: https://github.com/MOZGIII/ue4-gitignore/blob/master/.gitignore
+
+################################################
+# Ignore all files by default, but scan all directories
+*
+!*/
+
+# Allow git files and other utility files in the the repo root
+!/.git*
+!/*.editorconfig
+!/readme.md
+!/LICENSE
+
+################################################
+# Allow UE plugin files and folders
+!/Config/**/*.ini
+!/Source/**/*.cs
+!/Source/**/*.cpp
+!/Source/**/*.h
+!/*.uplugin
+
+################################################
+# Allow specific binary files tracked by git-lfs
+# Don't forget to track other files in .gitattributes when adding them here!
+!/Resources/*.png
