@@ -15,8 +15,8 @@ void FYesWeBrowseModule::RegisterButton()
 {
 	FToolMenuOwnerScoped OwnerScoped(this);
 
-	UToolMenu* ToolbarMenu = UToolMenus::Get()->ExtendMenu(TEXT("LevelEditor.LevelEditorToolBar.AssetsToolBar"));
-	FToolMenuSection& Section = ToolbarMenu->FindOrAddSection(TEXT("Content"));
+	UToolMenu* ToolbarMenu = UToolMenus::Get()->ExtendMenu(TEXT("LevelEditor.LevelEditorToolBar.ModesToolBar"));
+	FToolMenuSection& Section = ToolbarMenu->FindOrAddSection(TEXT("File"));
 
 	Section.AddEntry(FToolMenuEntry::InitToolBarButton(
 		TEXT("YesWeBrowse_OpenContentBrowserWindow"),
