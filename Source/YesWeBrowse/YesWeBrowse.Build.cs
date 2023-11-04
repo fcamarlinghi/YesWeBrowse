@@ -14,6 +14,7 @@ public class YesWeBrowse : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new[]
 		{
 			"Core",
+			"Projects",
 			"Slate",
 			"SlateCore",
 			"ToolMenus",

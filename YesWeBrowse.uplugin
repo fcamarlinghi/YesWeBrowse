@@ -1,7 +1,7 @@
 ﻿{
   "FileVersion": 3,
-  "Version": 1,
-  "VersionName": "1.0",
+  "Version": 2,
+  "VersionName": "2.0",
   "FriendlyName": "YesWeBrowse",
   "Description": "Bring the Content Browser button back to the UE5 toolbar.",
   "Category": "Other",
@@ -9,7 +9,7 @@
   "CreatedByURL": "https://minifloppy.it",
   "DocsURL": "https://minifloppy.it",
   "MarketplaceURL": "",
-  "CanContainContent": false,
+  "CanContainContent": true,
   "IsBetaVersion": false,
   "IsExperimentalVersion": false,
   "Installed": false,

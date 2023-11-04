@@ -16,6 +16,7 @@
 ################################################
 # Allow UE plugin files and folders
 !/Config/**/*.ini
+!/Content/**/*.svg
 !/Source/**/*.cs
 !/Source/**/*.cpp
 !/Source/**/*.h

@@ -1,6 +1,7 @@
 ﻿// Copyright Francesco Camarlinghi. All Rights Reserved.
 
 #include "YesWeBrowse.h"
+#include "YesWeBrowseStyle.h"
 
 #include "Framework/Docking/TabManager.h"
 #include "Modules/ModuleManager.h"
@@ -18,7 +19,7 @@ void FYesWeBrowseModule::RegisterButton()
 	FToolMenuSection& Section = ToolbarMenu->FindOrAddSection(TEXT("Content"));
 
 	Section.AddEntry(FToolMenuEntry::InitToolBarButton(
-		TEXT("YesWeBrowse_OpenContentBrowser"),
+		TEXT("YesWeBrowse_OpenContentBrowserWindow"),
 		FUIAction(
 			FExecuteAction::CreateLambda([]()
 			{
@@ -27,14 +28,16 @@ void FYesWeBrowseModule::RegisterButton()
 			}),
 			FCanExecuteAction::CreateLambda([]() { return true; })
 		),
-		LOCTEXT("ButtonLabel", "Open Content Browser"),
-		LOCTEXT("ButtonTooltip", "Open a Content Browser tab."),
-		FSlateIcon(FAppStyle::Get().GetStyleSetName(), TEXT("ContentBrowser.TabIcon"))
+		LOCTEXT("ButtonLabel", "Open Content Browser Window"),
+		LOCTEXT("ButtonTooltip", "Opens a Content Browser window"),
+		FSlateIcon(FYesWeBrowseStyle::Get().GetStyleSetName(), TEXT("ContentBrowserNewWindowIcon"))
 	));
 }
 
 void FYesWeBrowseModule::StartupModule()
 {
+	FYesWeBrowseStyle::Initialize();
+
 	UToolMenus::RegisterStartupCallback(FSimpleMulticastDelegate::FDelegate::CreateRaw(
 		this, &FYesWeBrowseModule::RegisterButton));
 }
@@ -43,6 +46,8 @@ void FYesWeBrowseModule::ShutdownModule()
 {
 	UToolMenus::UnRegisterStartupCallback(this);
 	UToolMenus::UnregisterOwner(this);
+
+	FYesWeBrowseStyle::Shutdown();
 }
 
 #undef LOCTEXT_NAMESPACE
