@@ -1,4 +1,4 @@
 # YesWeBrowse
-A simple plugin that brings back the Content Browser button on the UE5 toolbar.
+A simple plugin for those who miss the ability to open a Content Browser in a separate window with a single click in Unreal Engine 5.
 
-![yeswebrowse](https://user-images.githubusercontent.com/789284/217759122-7932e42c-fbab-4445-aee6-e09bb7b57bfd.png)
+![](https://github.com/fcamarlinghi/YesWeBrowse/assets/789284/fb893671-486e-4a0b-8cf0-47be9a410814)
